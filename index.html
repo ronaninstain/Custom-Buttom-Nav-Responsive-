@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bottom Nav</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="s-to-hide-on-large-device-S">
+        <div class="searchform">
+            <div class="searchform">
+                <form id="search" action="">
+                    <input type="hidden" name="post_type" value="course">
+                    <input type="text" class="s" id="s" name="s" placeholder="Search courses.." value="">
+                    <button type="submit" class="sbtn"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="S-Bottom-Navbar" id="S-Bottom-Navbar-id">
+            <a href="#home"><i class="fa fa-home" aria-hidden="true"></i><span>Home</span></a>
+            <a href="#search" class="S-Bottom-SearchLink"><i class="fa fa-search"
+                    aria-hidden="true"></i><span>Search</span></a>
+            <a href="#cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span>Cart</span></a>
+            <a href="#user"><i class="fa fa-user" aria-hidden="true"></i><span>Profile</span></a>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script>
+    $("#S-Bottom-Navbar-id").on('click', 'a', function () {
+        $("a").removeClass("active");
+        $(this).addClass("active");  // adding active class
+    });
+
+    $(function () {
+        $('.S-Bottom-SearchLink').on('click', function (e) {
+            $('.searchform').toggleClass('open');
+        });
+    });
+</script>
+
+</html>
