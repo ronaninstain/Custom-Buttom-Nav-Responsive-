@@ -1,3 +1,4 @@
+
 <div class="s-to-hide-on-large-device-S">
     <div class="searchform">
         <form id="search" action="">
@@ -10,6 +11,7 @@
         <a href="<?php echo vibe_site_url('', 'logo'); ?>"><i class="fa fa-home" aria-hidden="true"></i><span>Home</span></a>
         <a href="#search" class="S-Bottom-SearchLink"><i class="fa fa-search" aria-hidden="true"></i><span>Search</span></a>
         <a href="<?php echo wc_get_cart_url() ?>"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span>Cart</span></a>
+        <a href="#" class=""><i class="fa fa-gift forLoopingColorGiftBox" aria-hidden="true"></i><span class="forLoopingColorGiftBox">Gift Box</span></a>
         <?php
         if (is_user_logged_in()) { ?>
             <a href="<?php bp_loggedin_user_link(); ?>"><i class="fa fa-user" aria-hidden="true"></i><span>Profile</span></a>
